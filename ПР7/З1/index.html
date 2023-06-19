@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Візитка</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  
+  <header class="header">
+    <a href="\Практичні\index.html" style="font-weight: 700;color: #000;text-decoration: none;">На головну</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a href="#" class="nav-link">Головна</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">Про мене</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Навички</a></li>
+          <li class="nav-item"><a href="#contacts" class="nav-link">Контакти</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="hero jumbotron text-center">
+      <div class="container">
+        <h1 class="display-4">Богдан Касянчук</h1>
+        <p class="lead">Дизайнер</p>
+        <p class="lead">17 років, Хмельницький</p>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary active">UA</button>
+          <button type="button" class="btn btn-secondary">ENG</button>
+        </div>
+        <img src="land.jpg" alt="Фото" class="img-fluid rounded mx-auto d-block my-3" style="height: 400px;">
+      </div>
+    </section>
+
+    <section id="about" class="container text-center my-5">
+      <h2 class="display-3">Про мене</h2>
+      <p class="lead">Привіт, мене звати Богдан, я дизайнер з міста Хмельницький</p>
+    </section>
+
+    <section id="contacts" class="container text-center my-5">
+      <h1 class="display-4">Контакти</h1>
+      <p class="lead">Є запитання? Напишіть мені!</p>
+      <form class="mx-auto" style="max-width: 400px;">
+        <div class="form-group">
+          <label for="nameInput">Ім'я</label>
+          <input type="text" class="form-control" id="nameInput" placeholder="Введіть ім'я">
+        </div>
+        <div class="form-group">
+          <label for="emailInput">Електронна пошта</label>
+          <input type="email" class="form-control" id="emailInput" placeholder="Введіть електронну пошту">
+        </div>
+        <button type="submit" class="btn btn-primary">Відправити повідомлення</button>
+      </form>
+    </section>
+  </main>
+    <footer class="footer bg-light py-3">
+      <div class="container text-center">
+        <p>Підпишіться на мене</p>
+        <p>LinkedIn, Instagram, Dribble</p>
+      </div>
+    </footer>
+    </body>
+    </html>

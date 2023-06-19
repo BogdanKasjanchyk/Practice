@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відправка email</title>
+</head>
+<body>
+    <a href="\Практичні\index.html" style="font-weight: 700;color: #000;text-decoration: none;">На головну</a>
+    <h1>Відправлення e-mail</h1>
+
+    <form name="mailer" onsubmit="return checkIt()">
+
+        <label for="Subject">Тема:</label><br>
+        <input type="text" id="Subject" name="Subject"><br>
+
+        <label for="Message">Повідомлення:</label><br>
+        <textarea id="Message" name="Message"></textarea><br>
+
+        <input type="submit" value="Відправити" onclick="msg()">
+    </form>
+
+    <script language="JavaScript">
+        function checkIt() {
+            if (document.forms.mailer.Name.value != "") {
+            } else {
+                alert("\nОбласть \"Ім'я\" у формі. \n\Будь ласка, введіть своє ім'я.");
+                document.forms.mailer.Name.focus();
+                return false;
+            }
+
+            if (document.forms.mailer.Subject.value != "") {
+            } else {
+                alert("\nОбласть \"Тема\" в формі. \n\Будь ласка, введіть тему.");
+                document.forms.mailer.Subject.focus();
+                return false;
+            }
+
+            if (document.forms.mailer.Message.value != "") {
+                return true;
+            } else {
+                alert("\nОбласть \"Повідомлення\" в формі. \n\nБудь ласка, напишіть повідомлення.");
+                document.forms.mailer.Message.focus();
+                return false;
+            }
+        }
+
+        function msg() {
+            document.mailer.action = "mailto:astra1990@meta.ua"
+            mailtoandSubject = ('?Subject=' + document.mailer.Subject.value) + '&Body=' + document.mailer.Message.value;
+        }
+    </script>
+
+</body>
+</html>

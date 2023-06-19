@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестування</title>
+</head>
+<body>
+    <style>
+        *{
+            font-family: monospace;
+            font-size: 1.1rem;
+        }
+        td{
+            padding: 0.5rem;
+        }
+    </style>
+     <a href="\Практичні\index.html" style="font-weight: 700;color: #000;text-decoration: none;">На головну</a>
+    <h1>Тестування</h1>
+    <h2>Таблиця істинності логічного елемента І-НЕ</h2>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>Y</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <h2>Перевірка знання таблиці істинності за допомогою списку:</h2>
+
+    <p>Якщо A = 1 та B = 1, то значення Y буде:</p>
+
+    <select id="answer" multiple size="2">
+        <option value="0">0</option>
+        <option value="1">1</option>
+    </select>
+
+    <button id="check" onMouseOver="checkAnswer()">Перевірити відповідь</button>
+
+    <p id="result"></p>
+
+    <script type="text/javascript">
+        function checkAnswer() {
+            var answer = document.getElementById("answer").value;
+            var result = document.getElementById("result");
+
+            if (answer === "0") {
+                result.innerHTML = "Ваша відповідь правильна!";
+                result.style.color = "green";
+                result.style.textTransform = "uppercase";
+                result.style.fontWeight = "1000";
+            } else {
+                result.innerHTML = "Ваша відповідь неправильна.";
+                result.style.color = "red";
+                result.style.textTransform = "uppercase";
+                result.style.fontWeight = "1000";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

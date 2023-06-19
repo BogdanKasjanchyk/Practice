@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Підрахунок</title>
+</head>
+<body>
+    <a href="\Практичні\index.html" style="font-weight: 700;color: #000;text-decoration: none;">На головну</a>
+    <h2>Результати обчислень</h2>
+    <ul id="results"></ul>
+    <script>
+        function calculate(x) {
+            if (x < 4) {
+                return Math.tan(x) - Math.pow(x, 2);
+            } else if (x == 4) {
+                return 35 * Math.PI;
+            } else {
+                return Math.log(x) + 3;
+            }
+        }
+
+        var xStart = Number(prompt('Введіть початкове значення x:'));
+        var xEnd = Number(prompt('Введіть кінцеве значення x:'));
+        var step = Number(prompt('Введіть крок зміни значень аргументу:'));
+
+        var resultsList = document.getElementById('results');
+        for (var x = xStart; x <= xEnd; x += step) {
+            var listItem = document.createElement('li');
+            listItem.innerHTML = `x = ${x}, y = ${calculate(x)}`;
+            resultsList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

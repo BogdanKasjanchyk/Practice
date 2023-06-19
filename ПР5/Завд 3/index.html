@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функції</title>
+</head>
+<body>
+    <a href="\Практичні\index.html" style="font-weight: 700;color: #000;text-decoration: none;">На головну</a>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+            padding: 0.1rem;
+            letter-spacing: 1px;
+        }
+        body{
+            padding: 2rem;
+            font-size: 1.2rem;
+        }
+        h2{
+           margin: 1rem 0 1rem 0;
+           font-size: 2rem;
+        }
+
+    </style>
+    <h2>Константи</h2>
+    <ul>
+        <li>Значення константи е = <span id="e"></span></li>
+        <li>Значення константи π = <span id="pi"></span></li>
+        <li>Десятковий логарифм постійної Ейлера (е) = <span id="log10e"></span></li>
+        <li>Двійковий логарифм постійної Ейлера (е) = <span id="log2e"></span></li>
+        <li>Натуральний логарифм числа 10 = <span id="ln10"></span></li>
+        <li>Натуральний логарифм числа 2 = <span id="ln2"></span></li>
+        <li>Корінь квадратний із двох = <span id="sqrt2"></span></li>
+        <li>Корінь квадратний з однієї другої = <span id="sqrt1_2"></span></li>
+    </ul>
+
+    <h2>Функції</h2>
+    <ul>
+        <li>Результат обчислення арктангенса одиниці: y = <span id="atan1"></span></li>
+        <li>Результат зведення е в степінь 2: y = <span id="exp2"></span></li>
+        <li>Натуральний логарифм від e<sup>2</sup>: y = <span id="lnE2"></span></li>
+        <li>Результат обчислення десяткового логарифма від числа 100: y = <span id="log100"></span>
+    </ul>
+
+    <h2>Генератор випадкових чисел</h2>
+    Формування випадкових чисел в інтервалі [0;1]: y = <span id="random"></span>
+
+    <script>
+        document.getElementById('e').innerHTML = Math.E;
+        document.getElementById('pi').innerHTML = Math.PI;
+        document.getElementById('log10e').innerHTML = Math.LOG10E;
+        document.getElementById('log2e').innerHTML = Math.LOG2E;
+        document.getElementById('ln10').innerHTML = Math.LN10;
+        document.getElementById('ln2').innerHTML = Math.LN2;
+        document.getElementById('sqrt1_2').innerHTML = Math.SQRT1_2;
+        document.getElementById('sqrt2').innerHTML = Math.SQRT2;
+
+        document.getElementById('atan1').innerHTML = Math.atan(1);
+        document.getElementById('exp2').innerHTML = Math.exp(2);
+        document.getElementById('lnE2').innerHTML = Math.log(Math.E * Math.E);
+        document.getElementById('log100').innerHTML = Math.log10(100);
+
+        document.getElementById('random').innerHTML = Math.random();
+    </script>
+</body>
+</html>

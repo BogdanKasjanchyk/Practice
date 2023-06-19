@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.table__wrapper{
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 4rem;
+    text-align: left;
+    font-size: 1.3rem;
+}
+td,th{
+    padding-right: 1rem;
+    padding-top: 0.3rem;
+}
+th{
+    padding-bottom: 1rem;
+    letter-spacing: 2px;
+    color: #222222;
+    font-weight: 1000;
+    font-size: 2rem;
+}
+td {
+    letter-spacing: 1px;
+  }
+  
+
