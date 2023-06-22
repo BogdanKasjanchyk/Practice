@@ -17,49 +17,46 @@
         </div>
         <h1>Відправлення e-mail</h1>
 
-    <form name="mailer" onsubmit="return checkIt()">
+        <FORM NAME="mailer" METHOD="post" ACTION="" ENCTYPE= "text/plain" onSubmit="(document.mailer.action += mailtoandSubject)">
 
         <label for="Subject">Тема:</label><br>
-        <input type="text" id="Subject" name="Subject"><br>
+        <INPUT TYPE="text" NAME="Subject"onChange="msg(this.form)">
 
         <label for="Message">Повідомлення:</label><br>
-        <textarea id="Message" name="Message"></textarea><br>
+        <TEXTAREA NAME="Message" onChange="msg(this.form)"></TEXTAREA></textarea><br>
 
         <input type="submit" value="Відправити" onclick="msg()">
     </form>
 </div>
    
 
-    <script>
-        function checkIt() {
-            if (document.forms.mailer.Name.value != "") {
-            } else {
-                alert("\nОбласть \"Ім'я\" у формі. \n\Будь ласка, введіть своє ім'я.");
-                document.forms.mailer.Name.focus();
-                return false;
-            }
-
-            if (document.forms.mailer.Subject.value != "") {
-            } else {
-                alert("\nОбласть \"Тема\" в формі. \n\Будь ласка, введіть тему.");
-                document.forms.mailer.Subject.focus();
-                return false;
-            }
-
-            if (document.forms.mailer.Message.value != "") {
-                return true;
-            } else {
-                alert("\nОбласть \"Повідомлення\" в формі. \n\nБудь ласка, напишіть повідомлення.");
-                document.forms.mailer.Message.focus();
-                return false;
-            }
+<SCRIPT LANGUAGE="JavaScript">
+    function checkIt() {
+        if (document.forms.mailer.Name.value != "") {
+        } else {
+            alert("\nОбласть \"Ім'я\" у формі. \n\Будь ласка, введіть своє ім'я.");
+            document.forms.mailer.Name.focus();
+            return false;
         }
-
-        function msg() {
-            document.mailer.action = "mailto:astra1990@meta.ua"
-            mailtoandSubject = ('?Subject=' + document.mailer.Subject.value) + '&Body=' + document.mailer.Message.value;
+        if (document.forms.mailer.Subject.value != "") {
+        } else {
+            alert("\nОбласть \"Тема\" в формі. \n\Будь ласка, введіть, введите те-му.");
+            document.forms.mailer.Subject.focus();
+            return false;
         }
-    </script>
+        if (document.forms.mailer.Message.value != "") {
+            return true;
+        } else {
+            alert("\nОбласть \"Повідомлення\" в формі. \n\nБудь ласка, напишіть повідомлення.");
+            document.forms.mailer.Message.focus();
+            return false;
+        }
+    }
+    function msg() {
+        document.mailer.action = "mailto:astra1990@meta.ua"
+        mailtoandSubject = (('?Subject=' + document.mailer.Subject.value) + '&Body=' + document.mailer.Message.value);
+    }
+    </SCRIPT>
 
 </body>
 </html>
