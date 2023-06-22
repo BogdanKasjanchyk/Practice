@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Відправка email</title>
 </head>
+
 <body>
-    <a href="https://bogdankasjanchyk.github.io/Practice/" style="font-weight: 700;color: #000;text-decoration: none;">На головну</a>
-    <h1>Відправлення e-mail</h1>
+    <div class="body__wrapper">
+        <div class="link">
+            <a href="https://bogdankasjanchyk.github.io/Practice/" style="color: #000;text-decoration: none;">На головну</a>
+        </div>
+        <h1>Відправлення e-mail</h1>
 
     <form name="mailer" onsubmit="return checkIt()">
 
@@ -19,8 +27,10 @@
 
         <input type="submit" value="Відправити" onclick="msg()">
     </form>
+</div>
+   
 
-    <script language="JavaScript">
+    <script>
         function checkIt() {
             if (document.forms.mailer.Name.value != "") {
             } else {

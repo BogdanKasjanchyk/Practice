@@ -7,6 +7,41 @@
     <title>Цитати</title>
 </head>
 <body>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            padding: 0.1rem;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body{
+            padding: 2rem;
+            font-size: 1.1rem;
+            background: #f4f4f4;
+        }
+        h2{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        button{
+            min-width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            border: 0;
+            cursor: pointer;
+            background: #46c295;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 1rem;
+            transition: all .1s;
+        }
+        button:hover{
+            transform: translateY(-10px);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+    </style>
     <a href="https://bogdankasjanchyk.github.io/Practice/" style="font-weight: 700;color: #000;text-decoration: none;">На головну</a>
     <h2>Цитати авторів</h2>
     <button onclick="showQuote('Д. Павличко')">Д. Павличко</button>
